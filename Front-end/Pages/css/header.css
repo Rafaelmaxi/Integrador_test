@@ -1,0 +1,577 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+:root{
+    --text-color:white;
+    --principal:red;
+    --body-color:#E4E9F7;
+}
+
+body{
+    height: 100vh;
+    background-color: var(--body-color);
+}
+
+header{
+    width: 100%;
+    height: 5rem;
+    background: var(--principal);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    z-index: 999;
+}
+.contenedor-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+.contenedor-izquierda .logo{
+    width: 100%;
+    height: 100%;
+}
+.contenedor-izquierda .logo h3 a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--text-color);
+    font-family: "Poetsen One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Estilos para el logo del encabezado */
+.letras-logo .letra-amarilla {
+    color: yellow;
+    font-family: "Poetsen One", sans-serif;
+}
+
+/* Estilos para el logo del menú de navegación */
+#letras_logo_nav .letra-amarilla {
+    color: yellow;
+}
+
+.contenedor-medio .links{
+    width: 100%;
+    height: 100%;
+}
+.contenedor-medio .links ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.contenedor-medio .links ul li{
+    margin: 0 1.5rem;
+}
+.contenedor-medio .links ul li a{
+    position: relative;
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+.contenedor-medio .links ul li a:hover{
+    color: yellow;
+    transition: all 0.5s ease-in;
+}
+/* DESCOMENTAR EFECTO BONITO DEBAJO DE LAS LETRAS
+.contenedor-medio .links ul li a::before{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateY(50%);
+    height: 6px;
+    width: 6px;
+    border-radius: 50%;
+    background-color: var(--text-color);
+    opacity: 0;
+    transition: all .3s ease;
+}
+.contenedor-medio .links ul li a:hover{
+    color: white;
+    transition: all .3s ease;
+}
+.contenedor-medio .links ul li:hover a::before{
+    opacity: 1;
+    background: white;
+}
+*/
+.contenedor-medio .links .categorias .subcategorias{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+    background: var(--principal);
+    width: 7rem;
+    padding-top: 1.5rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+}
+
+.contenedor-medio .links .categorias:hover .subcategorias{
+    opacity: 1;
+    visibility: visible;
+}
+
+.contenedor-derecha{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+.contenedor-derecha .usuario,
+.contenedor-derecha .buscar,
+.contenedor-derecha .menu
+{
+    width: 100%;
+    height: 2rem;
+}
+.contenedor-derecha .usuario i,
+.contenedor-derecha .buscar i,
+.contenedor-derecha .menu i
+{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+.contenedor-derecha .usuario i:hover,
+.contenedor-derecha .buscar i:hover,
+.contenedor-derecha .menu i:hover
+{
+    /*color: red;*/
+    transition: all 0.3s ease;
+}
+.menu{
+    
+    height: 2rem;
+}
+.menu i{
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+}
+header{
+    display: fixed;
+}
+nav{
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+}
+
+.menu{
+    display: none;
+    cursor: pointer;
+}
+.menu i{
+    color: white;
+}
+
+.buscar{
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+.buscar .caja-buscar{
+    position: absolute;
+    
+    right: 0;
+    top: 70px;
+}
+.buscar .caja-buscar input {
+    height: 2.5rem; /* Altura del input */
+    width: 200px; /* Ancho del input */
+    padding: 0 10px; /* Espaciado interno para el contenido del input */
+    border: 2px solid red; /* Borde sólido de color rojo */
+    border-radius: 10px; /* Borde redondeado */
+    outline: none; /* Quita el contorno predeterminado en el enfoque */
+    transition: border-color 0.3s ease; /* Transición suave para el color del borde */
+    font-size: 1rem;
+}
+.buscar .caja-buscar::before{
+    content: '';
+    position: absolute;
+    right: 10px;
+    top: -4px;
+    height: 12px;
+    width: 12px ;
+    background-color: red;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+
+.buscar .caja-buscar input:focus {
+    border-color: #ff7f50; /* Cambia el color del borde cuando el input está enfocado */
+}
+
+.buscar .caja-buscar i{
+    color: black;
+    display: flex;
+}
+.buscar .caja-buscar{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease-in;
+}
+#search_check:checked ~ .buscar  .caja-buscar{
+    opacity: 1;
+    visibility: visible;
+}
+
+
+@media only screen and (max-width:768px){
+    header .contenedor-header .contenedor-medio{
+        display: none
+    }
+    .menu{
+        display: block;
+        cursor: pointer;
+    }
+    #nav_check:checked ~ nav{
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    .usuario{
+        display: none; 
+    }
+    nav{
+        position: absolute;
+        left: -3000px;
+        top: 0;
+        z-index: 999;
+        width: 70%;
+        height:100vh;
+        padding-top: 1rem;
+        display: block;
+        flex-direction: column;
+        background: white;
+        
+        transition: all .3s ease;
+    }
+    nav .cont-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        
+        height: 3rem;
+    }
+    nav .cont-head .contenedor-logo,
+    nav .cont-head #close
+    {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    nav .cont-head .menu i{
+        color: black;
+    }
+    nav .cont-head .contenedor-logo a{
+        font-size: 3rem;
+        text-decoration: none;
+        color: red;
+        font-family: "Poetsen One", sans-serif;
+        text-transform: uppercase;
+    }
+    nav .amarillo{
+        color: yellow;
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    nav .cont-head #close i{
+        height: 100%;
+        width: 100%;
+        color: black;
+    }
+    /*NUEVO*/
+    nav .contenedor-links{
+        width: 80%;
+        margin: 0 2rem;
+    }
+    nav .contenedor-links .links{
+        margin-top: 1.5rem;
+    }
+    nav .contenedor-links .links ul li{
+        list-style: none;
+        margin-top: 10px;
+        padding: 1rem;
+    }
+    nav .contenedor-links .links ul li:hover,
+    nav .contenedor-links .links ul li a:hover{
+        background: red;
+        border-radius: 10px;
+        color: white;
+    }
+    nav .contenedor-links .links ul li a{
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: black;
+        letter-spacing: 1px;
+    }
+    nav .contenedor-links .links ul li ul li{
+        margin-left: 3rem;
+    }
+    nav .contenedor-links .links ul li ul{
+        display: none;
+    }
+    nav .contenedor-links .links ul li:hover ul{
+        display: block;
+    }
+    nav .contenedor-links .links ul li ul li:hover,
+    nav .contenedor-links .links ul li ul li a:hover{
+        background: #ff5757;
+    }
+}
+
+
+/*NAVBAR*/
+@media only screen and (max-width:575px){
+    header .contenedor-header .contenedor-medio{
+        display: none
+    }
+    .menu{
+        display:block;
+        cursor: pointer;
+    }
+    .menu i{
+        display: block;
+    }
+
+    #nav_check:checked ~ nav{
+        left: 0;
+    }
+    .usuario{
+        display: none; 
+    }
+    nav{
+        position: absolute;
+        left: -3000px;
+        top: 0; 
+        z-index: 999;
+        width: 100%;
+        height:100vh;
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        background: white;
+        
+        transition: all .3s ease;
+    }
+    nav .cont-head{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 1rem;
+        margin-left: 1rem;
+        
+        height: 3rem;
+    }
+    nav .cont-head .contenedor-logo,
+    nav .cont-head #close
+    {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    nav .cont-head .contenedor-logo a{
+        font-size: 3rem;
+        text-decoration: none;
+        
+        text-transform: uppercase;
+    }
+    nav .cont-head #close i{
+        height: 100%;
+        width: 100%;
+        color: black;
+    }
+    nav .contenedor-links{
+        width: 80%;
+        margin: 0 2rem;
+    }
+    nav .contenedor-links .links{
+        margin-top: 1.5rem;
+    }
+    nav .contenedor-links .links ul li{
+        list-style: none;
+        margin-top: 10px;
+        padding: 1rem;
+    }
+    nav .contenedor-links .links ul li:hover,
+    nav .contenedor-links .links ul li a:hover{
+        background: red;
+        border-radius: 10px;
+        color: white;
+    }
+    nav .contenedor-links .links ul li a{
+        text-decoration: none;
+        font-size: 1.8rem;
+        color: black;
+        letter-spacing: 1px;
+    }
+    nav .contenedor-links .links ul li ul li{
+        margin-left: 3rem;
+    }
+    nav .contenedor-links .links ul li ul li:hover,
+    nav .contenedor-links .links ul li ul li a:hover{
+        background: #ff5757;
+    }
+    nav .contenedor-links .links ul li ul{
+        display: none;
+        transition: all 0.5s ease-in;
+    }
+    nav .contenedor-links .links ul li:hover ul{
+        display: block;
+    }
+}
+/* FIN HEADER AND NAV */
+
+/* SECCION BANNER*/
+
+.banner{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.img-banner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.img-banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(0, 0, 0, 0.5); */
+}
+.img-banner img{
+    min-width: 100%;
+    max-height: 100vh;
+    height: auto;
+    width: auto;
+    object-fit: cover;
+}
+.text-banner{
+    position: absolute;
+    top: 50%; /* Coloca el texto en el 50% de la parte superior del contenedor */
+    left: 50%; /* Coloca el texto en el 50% de la parte izquierda del contenedor */
+    transform: translate(-50%, -50%); /* Centra el texto vertical y horizontalmente */
+    color: white;
+    text-align: center; /* Alinea el texto al centro */
+    padding: 0 20px; /* Agrega un relleno horizontal para el texto */
+}
+.text-banner h3{
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: yellow;
+}
+.text-banner p{
+    font-size: 2rem;
+    color: var(--principal);
+}
+@keyframes vibrar {
+    0% { transform: translateX(0); } /* Estado inicial, sin desplazamiento */
+    25% { transform: translateX(-3px); } /* Desplazamiento hacia la izquierda */
+    50% { transform: translateX(3px); } /* Desplazamiento hacia la derecha */
+    75% { transform: translateX(-3px); } /* Otro desplazamiento hacia la izquierda */
+    100% { transform: translateX(0); } /* Regresa a la posición inicial */
+}
+.text-banner button{
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    border: none;
+    background: var(--botones);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), /* Sombra normal */
+                0px 0px 10px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease-in-out;
+    animation: vibrar 0.5s infinite;
+}
+.text-banner button:hover{
+    background: var(--hover);
+    color: white;
+    transition: all 0.3s ease-in;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2), /* Aumenta la sombra cuando se pasa el cursor */
+                0px 0px 20px rgba(255, 255, 255, 0.7);
+    animation: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 575px) {
+    .text-banner h3 {
+        font-size: 2.5rem;
+    }
+    
+    .text-banner p {
+        font-size: 1rem;
+    }
+    
+    .text-banner button {
+        font-size: 1rem;
+    }
+    .img-banner{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .text-banner h3 {
+        font-size: 4rem;
+    }
+    
+    .text-banner p {
+        font-size: 2rem;
+    }
+    
+    .text-banner button {
+        font-size: 2rem;
+    }
+    .img-banner{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .text-banner h3 {
+        font-size: 5rem;
+    }
+    
+    .text-banner p {
+        font-size: 3rem;
+    }
+    
+    .text-banner button {
+        font-size: 3rem;
+    }
+    .img-banner{
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+/*FIN BANNER*/

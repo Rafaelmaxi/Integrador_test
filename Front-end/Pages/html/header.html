@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <!--HEADER-->
+    <link rel="stylesheet" href="../css/header.css">
+    <!--INICIO-->
+    <link rel="stylesheet" href="../css/inicio.css">
+    <!--FONT AWESOME-->
+    <script src="https://kit.fontawesome.com/233c0f00ee.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="contenedor-header">
+            <div class="menu" id='menu'>
+                <label for="nav_check">
+                    <i class="fa-solid fa-bars"></i>
+                </label> 
+            </div>
+            <div class="contenedor-izquierda">
+                <div class="logo">
+                    <h3><a href="#" class="letras-logo" id='letras_logo_header'>Rojas</a></h3>
+                </div>
+            </div>
+            <div class="contenedor-medio">
+                <div class="links">
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Nosotros</a></li>
+                        <li class="categorias"><a href="#">Categorias</a>
+                            <ul class="subcategorias">
+                                <li><a href="#">Item 1</a></li>
+                                <li><a href="#">Item 2</a></li>
+                                <li><a href="#">Item 3</a></li>
+                                <li><a href="#">Item 4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Carrito</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contenedor-derecha">
+                <div class="usuario">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <input type="checkbox" id='search_check' hidden/>
+                <div class="buscar">
+                    <label for="search_check">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <!--<i class="fa-solid fa-x close-bot"></i>-->
+                        <div class="caja-buscar">
+                            <input type="text" placeholder='Buscar...'/>
+                        </div>
+                    </label> 
+                </div>
+            </div>
+        </div>  
+    </header>
+    <input type="checkbox" id='nav_check' hidden />
+    
+    <nav>
+        <div class="cont-head">
+            <div class="contenedor-logo">
+                <h3><a href="#" class="letras-logo" id='letras_logo_nav'>ROJAS</a></h3>
+            </div>
+            <div class="menu" id='menu'>
+                <label for="nav_check">
+                    <i class="fa-solid fa-x"></i>
+                </label> 
+            </div>
+        </div>
+        <div class="contenedor-links">
+            <div class="links">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="#"><i class="fa-solid fa-book"></i> Nosotros</a></li>
+                    <li class="categorias_nav"><a href="#"><i class="fa-solid fa-list"></i> Categorias</a>
+                        <ul class="subcategorias_nav">
+                            <li><a href="#">Item 1</a></li>
+                            <li><a href="#">Item 2</a></li>
+                            <li><a href="#">Item 3</a></li>
+                            <li><a href="#">Item 4</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i> Carrito</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i> Cuenta</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<!--
+    <section class="banner">
+        <div class="img-banner">
+            <img src="" alt="">
+        </div>
+        <div class="text-banner">
+            <h3>Supermercado Rojas</h3>
+            <p>Comodidad, frescura y calidad, ¡todo a tu alcance!</p>
+        </div>
+    </section>-->
+
+    <section class="banner">
+        <div class="img-banner">
+            <img src="../img/banner-2.png" alt="banner">
+        </div>
+        <!--<div class="text-banner">
+            <h3>Servicios en seguridad y salud ocupacional</h3>
+            <p>Donde tu seguridad es más que un requisito, es una cultura</p>
+            <button>Contáctanos</button>
+        </div>-->
+    </section>
+
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
